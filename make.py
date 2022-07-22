@@ -369,6 +369,33 @@ class DecklinkQuadHDMIRecorder(Board):
             # Storage
             "pcie",
         })
+        
+# Alinx AX7101 --------------------------------------------------------------------------------
+
+class Ax7101(Board):
+    def __init__(self):
+        from litex_boards.targets import alinx_ax7101
+        Board.__init__(self, alinx_ax7101.BaseSoC, soc_capabilities={
+            # Communication
+            "serial",
+            "ethernet"
+            # Storage
+            #"sdcard",
+        }, bitstream_ext=".bit")
+        
+        
+# HSRM PROGENITOR --------------------------------------------------------------------------------
+
+class Progenitor(Board):
+    def __init__(self):
+        from litex_boards.targets import hsrm_progenitor
+        Board.__init__(self, hsrm_progenitor.BaseSoC, soc_capabilities={
+            # Communication
+            "serial",
+            "ethernet"
+            # Storage
+            #"sdcard",
+        }, bitstream_ext=".bit")
 
 #---------------------------------------------------------------------------------------------------
 # Lattice Boards
@@ -642,6 +669,8 @@ supported_boards = {
     "mnt_rkx7"                    : MNT_RKX7,
     "stlv7325"                    : STLV7325,
     "decklink_quad_hdmi_recorder" : DecklinkQuadHDMIRecorder,
+    "ax7101"                      : Ax7101,
+    "hsrm"                        : Progenitor,
 
     # Lattice
     "versa_ecp5"                  : VersaECP5,
