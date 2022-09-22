@@ -381,7 +381,7 @@ class Ax7101(Board):
             "ethernet"
             # Storage
             #"sdcard",
-        }, bitstream_ext=".bit")
+        })
         
         
 # HSRM PROGENITOR --------------------------------------------------------------------------------
@@ -395,7 +395,7 @@ class Progenitor(Board):
             "ethernet"
             # Storage
             #"sdcard",
-        }, bitstream_ext=".bit")
+        })
 
 #---------------------------------------------------------------------------------------------------
 # Lattice Boards
